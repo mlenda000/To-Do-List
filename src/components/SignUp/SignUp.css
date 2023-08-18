@@ -1,0 +1,48 @@
+html {
+  background-color: antiquewhite;
+}
+.title {
+  font-family: "Courier New", Courier, monospace;
+}
+.signupMsg {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  background-color: rgb(42, 53, 53);
+  color: antiquewhite;
+  margin-left: 10%;
+  padding: 1%;
+  width: 80%;
+  border-radius: 20px;
+  border: solid 2px black;
+}
+.signUp {
+  display: block;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: 1px inline;
+  background-color: rgb(42, 53, 53);
+  width: 30%;
+  border-radius: 20px;
+  border: solid 2px black;
+  margin-left: 35%;
+  text-align: right;
+}
+.inputs {
+  font-family: "Courier New", Courier, monospace;
+  font: bolder;
+  display: block;
+  text-align: justify;
+  padding: 1%;
+  margin-left: 22%;
+  color: antiquewhite;
+  contain: content;
+}
+.signup-button {
+  margin-top: 2%;
+  border-radius: 10px;
+  padding: 1%;
+  margin-right: 19%;
+}
+.input {
+  margin-left: 5%;
+}

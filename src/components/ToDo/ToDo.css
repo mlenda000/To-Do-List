@@ -1,0 +1,99 @@
+.formMsg {
+  font-family: "Courier New", Courier, monospace;
+  text-align: center;
+  background-color: rgb(42, 53, 53);
+  color: antiquewhite;
+  padding: 1%;
+  margin-left: 20%;
+  width: 60%;
+  border-radius: 20px;
+  border: solid 2px black;
+}
+.addTask {
+  display: block;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border: 1px inline;
+  background-color: rgb(42, 53, 53);
+  width: 30%;
+  border-radius: 20px;
+  border: solid 2px black;
+  margin-left: 35%;
+  text-align: right;
+  contain: content;
+}
+.inputsAdd {
+  font-family: "Courier New", Courier, monospace;
+  font: bolder;
+  display: block;
+  text-align: left;
+  padding: 1%;
+  margin-left: 18%;
+  color: antiquewhite;
+}
+.addButton {
+  margin-top: 2%;
+  border-radius: 10px;
+  padding: 1%;
+  background-color: rgb(61, 42, 79);
+  color: antiquewhite;
+  margin-right: 19%;
+}
+.input {
+  margin-left: 8%;
+}
+
+.strikefalse {
+  text-align: left;
+  text-decoration: line-through;
+}
+.striketrue {
+  text-align: left;
+  text-decoration: none;
+}
+.checkbox {
+  margin-right: 2em;
+}
+.listItem {
+  padding-right: 2em;
+  padding-left: 2em;
+}
+.mainContent {
+  display: flex;
+}
+.leftContent {
+  contain: content;
+  width: 50%;
+}
+.rightContent {
+  contain: content;
+  width: 50%;
+}
+li {
+  contain: content;
+  list-style: none;
+  margin-left: 25%;
+  font-family: "Courier New", Courier, monospace;
+  font-size: large;
+}
+.buttons {
+  width: 80%;
+  display: inline;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+button {
+  border-radius: 10px;
+  padding: 1%;
+  background-color: rgb(61, 42, 79);
+  color: antiquewhite;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+}
+.displaytrue {
+  display: none;
+}
+.displayfalse {
+  display: contents;
+}

@@ -1,27 +1,60 @@
-import { useState } from "react";
+import { useState, useEffect, useLocalStorage } from "react";
 import ToDoForm from "./ToDoForm";
 import ToDoList from "./ToDoList";
 import Completed from "../Completed/Completed";
 import Header from "../Header/Header";
 import Footer from "../Header/Footer";
 
-export default function ToDo(props) {
+export default function ToDo() {
   const [completedList, setCompletedList] = useState([]);
-  const [list, setList] = useState([
-    ["Learn how to code", true],
-    ["Finish my Homework", true],
-  ]);
+  // const [list, setList] = useState([]);
   const [completePage, setCompletePage] = useState(false);
   const [order, setOrder] = useState();
   const [button, setButton] = useState("Completed List");
+  const useLocalStorage = (storageKey, fallbackState) => {
+
+    const [value, setValue] = useState(
+      JSON.parse(localStorage.getItem('storageKey')) ?? fallbackState
+    );
+    useEffect(() => {
+      localStorage.setItem('storageKey', JSON.stringify(value));
+    }, value);
+    return [value, setValue];
+  };
+
+  // const [userKey, setUserKey] = useLocalStorage('tempkey', 0);
+  // auth.onAuthStateChanged(function(user) {
+  //   if (user) {
+  //     props.setLog(true);
+  //     localStorage.setItem('tempkey', JSON.stringify(auth.currentUser.email));
+  //   } else {
+  //     prop.setLog(false);
+  //   }
+  // });
+
+  // const userKeyStored = userKey;
+  const [list, setList] = useLocalStorage('storageKey', []);
+
+  // useEffect(() => {
+  //   localStorage.setItem('list', JSON.stringify(list));
+  // }, [list]);
+    
+  //   useEffect(() => {
+  //     const items = JSON.parse(localStorage.getItem('list'));
+  //     if (list) {
+  //      console.log(setList(list));
+  //     }
+  //   }, []);
+
 
   const removeItem = (index) => {
     setList([...list.slice(0, index), ...list.slice(index + 1, list.length)]);
   };
 
   const addItem = (a) => {
-    console.log("list", list);
     setList([...list, [a, true]]);
+    localStorage.setItem('storageKey', JSON.stringify(list));
+
   };
 
   const checkItem = (list) => {

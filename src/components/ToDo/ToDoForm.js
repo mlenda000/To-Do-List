@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./ToDo.css";
 
 function ToDoForm(props) {
@@ -7,6 +7,8 @@ function ToDoForm(props) {
     setNewTask(event.target.value);
     console.log("test", newTask);
   };
+
+
   return (
     <div className={"display" + props.completePage}>
       <h3 className="formMsg">Add Tasks to your To-Do List</h3>
